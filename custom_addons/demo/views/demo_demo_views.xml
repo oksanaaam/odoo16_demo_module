@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <menuitem id="menu_demo_demo" name="Demo" sequence="10"/>
+
+        <record id="view_demo_demo_tree" model="ir.ui.view">
+            <field name="name">demo.demo.tree</field>
+            <field name="model">demo.demo</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_demo_demo_form" model="ir.ui.view">
+            <field name="name">demo.demo.form</field>
+            <field name="model">demo.demo</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_demo_demo" model="ir.actions.act_window">
+            <field name="name">Demo</field>
+            <field name="res_model">demo.demo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_demo_demo_main" name="Demo" parent="menu_demo_demo" action="action_demo_demo"/>
+    </data>
+</odoo>
