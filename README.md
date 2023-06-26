@@ -19,6 +19,7 @@ Possibility to return a new sequence of dimensions, sorted ascending by area in 
 python -m venv venv
 venv\Scripts\activate (on Windows)
 source venv/bin/activate (on macOS)
+git clone https://github.com/odoo/odoo.git --depth 1 --branch 16.0
 cd odoo
 pip install -r requirements.txt
 ```
@@ -40,9 +41,7 @@ addons_path = path to addons, path to addons custom_addons
 
 ## Usage
 
-Cd to folder odoo and start the server:
-
-`python odoo-bin`
+`python odoo-bin -c /<filepath>/odoo.conf`
 
 For running replace_characters:
 
